@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lyUIScrollView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>({
+            UIScrollView *aScrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+            aScrollView.contentSize = CGSizeMake(4*self.view.width, self.view.height);
+            aScrollView.bounces = NO;
+            aScrollView.pagingEnabled = YES;
+            aScrollView.delaysContentTouches = NO;
+            aScrollView.showsHorizontalScrollIndicator = NO;
+            aScrollView;
+        });</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BA4FEA7E-DC74-4272-9326-8BB04FA40831</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>CreateScrollView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

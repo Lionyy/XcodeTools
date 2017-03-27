@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>cellImageCoverView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        _imageCoverView = [UIView new];
+        _imageCoverView.alpha = 0.0f;
+        _imageCoverView.backgroundColor = LV_CELL_H_BG_COLOR;
+        [_screenShotView addSubview:_imageCoverView];
+        [_imageCoverView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.mas_equalTo(_screenShotView);
+        }];
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
+    [super setSelected:selected animated:animated];
+    [self showSelectedAnimated:selected];
+}
+
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated
+{
+    [super setHighlighted:highlighted animated:animated];
+    [self showSelectedAnimated:highlighted];
+}
+
+- (void)showSelectedAnimated:(BOOL)selected
+{
+    if (selected) {
+        [UIView animateWithDuration:0.3 animations:^{
+            _imageCoverView.alpha = 1.0;
+        }];
+    }else {
+        [UIView animateWithDuration:0.3 animations:^{
+            _imageCoverView.alpha = 0.0;
+        }];
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B41EEADB-9209-41A3-A691-4D59C610F8FA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>cellImageCoverView</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>cellImageCoverView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
