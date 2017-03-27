@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lySectionView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    LSYSectionHeaderView *sectionView = [[LSYSectionHeaderView alloc] initWithFrame:CGRectMake(0, 0, tableView.width, 50)];
+    [sectionView setBackgroundColor:LK_MAIN_BG_COLOR];
+    [sectionView.rightButton setImageEdgeInsets:UIEdgeInsetsZero];
+    [sectionView.rightButton addTarget:self action:@selector(clearButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [sectionView.rightButton.titleLabel setFont:LKFont(13)];
+    [sectionView.rightButton setTitleColor:UIColorHex(0x8a8a8a) forState:UIControlStateNormal];
+    [sectionView.rightButton setTitle:LKLocalizedString(@"全部清空") forState:UIControlStateNormal];
+    [sectionView.rightButton setImage:LKImage(@"public_icon_rubbish") forState:UIControlStateNormal];
+    [sectionView.rightButton setImage:LKImage(@"public_icon_rubbish_h") forState:UIControlStateHighlighted];
+    [sectionView.rightButton setTitleEdgeInsets:UIEdgeInsetsMake(0, 4, 0, -4)];
+    
+    [sectionView.titleLabel setTextColor:UIColorWithHex(0x1a1a1a)];
+    [sectionView.titleLabel setFont:LKFont(15)];
+    [sectionView.titleLabel setText:LKLocalizedString(@"搜索历史")];
+    [sectionView.leftImageView setImage:[[UIImage imageWithColor:LK_MAIN_COLOR] stretchableImageWithLeftCapWidth:2 topCapHeight:10]];
+    
+    [LVUIUtils addLineInView:sectionView top:NO leftMargin:0 rightMargin:0];
+
+    [sectionView.leftImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(0);
+        make.centerY.mas_equalTo(sectionView.mas_centerY);
+        make.size.mas_equalTo(CGSizeMake(2, 20));
+    }];
+    
+    [sectionView.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(sectionView.leftImageView.mas_right).offset(15);
+        make.centerY.mas_equalTo(sectionView.mas_centerY);
+        make.size.mas_equalTo(CGSizeMake(200, 20));
+    }];
+    
+    [sectionView.rightButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(sectionView.mas_right).offset(-10);
+        make.centerY.mas_equalTo(sectionView.mas_centerY);
+        make.size.mas_equalTo(CGSizeMake(80, 50));
+    }];
+    
+    return sectionView;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1C227CCD-BAC8-4002-80EE-8F16C81B452C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>SectionView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

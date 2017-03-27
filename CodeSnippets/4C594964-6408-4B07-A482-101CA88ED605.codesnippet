@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lyUIButton</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>({
+            UIButton *aButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            aButton.frame = (CGRect){0,0,50,40};
+            aButton.titleLabel.font = LKFont(14);
+            [aButton setTitleColor:UIColorWithHex(0x007aff) forState:UIControlStateNormal];
+            [aButton setTitleColor:UIColorWithHex(0x007aff) forState:UIControlStateHighlighted];
+            [aButton setImage:LKImage(@"image_nor") forState:UIControlStateNormal];
+            [aButton setImage:LKImage(@"image_hl") forState:UIControlStateHighlighted];
+            [aButton setTitle:@"自定义Button" forState:UIControlStateNormal];
+              aButton;
+});</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4C594964-6408-4B07-A482-101CA88ED605</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>CreateUIButton</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
